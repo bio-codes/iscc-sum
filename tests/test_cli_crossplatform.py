@@ -328,4 +328,4 @@ class TestCrossPlatformCompatibility:
         else:
             # Case-sensitive filesystem (Linux)
             # File not found
-            assert "No such file" in result2.stderr
+            assert "No such file" in result2.output
