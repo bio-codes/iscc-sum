@@ -1,5 +1,7 @@
 """Copy README.md and CHANGELOG.md to documentation"""
 
+from __future__ import annotations
+
 import re
 from os.path import abspath, dirname, join
 

@@ -1,5 +1,7 @@
 # Command-line interface for iscc-sum tool
 
+from __future__ import annotations
+
 import sys
 from contextlib import contextmanager
 from importlib.metadata import PackageNotFoundError, version
@@ -828,5 +830,5 @@ def _output_checksum(iscc, filepath, tag, zero, output_file=None):
         click.echo("\0", nl=False, file=output_file)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     cli()

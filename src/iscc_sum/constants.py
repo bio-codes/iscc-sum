@@ -390,7 +390,7 @@ CDC_GEAR = (
     854125182,
 )
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     max_mpa = max(MPA).bit_length()
     max_mpb = max(MPB).bit_length()
     max_cdc = max(CDC_GEAR).bit_length()

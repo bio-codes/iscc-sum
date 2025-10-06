@@ -11,6 +11,8 @@ Each layer builds on the previous, ensuring consistent cross-platform ordering
 while enabling progressive filtering capabilities for content hashing workflows.
 """
 
+from __future__ import annotations
+
 import os
 from os import DirEntry
 from pathlib import Path
