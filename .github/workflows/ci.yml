@@ -82,6 +82,8 @@ jobs:
         include:
           # Test all Python versions on Ubuntu
           - os: ubuntu-latest
+            python-version: "3.9"
+          - os: ubuntu-latest
             python-version: "3.10"
           - os: ubuntu-latest
             python-version: "3.11"
@@ -96,9 +98,9 @@ jobs:
             python-version: "3.13"
           # Test oldest Python on Windows and macOS for edge cases
           - os: windows-latest
-            python-version: "3.10"
+            python-version: "3.9"
           - os: macos-latest
-            python-version: "3.10"
+            python-version: "3.9"
     
     steps:
       - name: Configure Git line endings

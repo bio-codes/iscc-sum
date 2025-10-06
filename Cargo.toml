@@ -22,8 +22,8 @@ path = "src/main.rs"
 
 [dependencies]
 # "extension-module" tells pyo3 we want to build an extension module (skips linking against libpython.so)
-# "abi3-py310" tells pyo3 (and maturin) to build using the stable ABI with minimum Python version 3.10
-pyo3 = { version = "0.25.1", features = ["extension-module", "abi3-py310"] }
+# "abi3-py39" tells pyo3 (and maturin) to build using the stable ABI with minimum Python version 3.9
+pyo3 = { version = "0.25.1", features = ["extension-module", "abi3-py39"] }
 rayon = "1.10.0"
 xxhash-rust = { version = "0.8.15", features = ["xxh32"] }
 blake3 = "1.8.2"

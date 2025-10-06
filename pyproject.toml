@@ -7,12 +7,13 @@ license = "Apache-2.0"
 authors = [
     { name = "Titusz Pan", email = "titusz.pan@gmail.com" }
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -23,7 +24,7 @@ classifiers = [
 ]
 dependencies = [
     "blake3>=1.0.5",
-    "click>=8.0.0",
+    "click>=8.0.0,<8.2.0",
     "pathspec>=0.12.1",
     "universal-pathlib>=0.2.6",
     "xxhash>=3.5.0",
@@ -46,8 +47,8 @@ python-source = "src"
 requires = ["maturin>=1.0,<2.0"]
 build-backend = "maturin"
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "maturin>=1.0",
     "pytest>=8.0",
     "pytest-cov>=4.0",
@@ -69,14 +70,14 @@ dev-dependencies = [
 
 [tool.ruff]
 line-length = 112
-target-version = "py310"
+target-version = "py39"
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
 ignore = ["F401"]  # Ignore unused imports - needed for type annotations
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.9"
 warn_return_any = true
 warn_unused_configs = true
 
